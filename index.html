@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <input id="screen" maxlength="11" disabled></input>
+
+        <div class="toggle-btn">
+            <input type="checkbox" id="check" class="inpt" onchange="darkTheme()">
+            <label for="check" class="switch">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="buttons">
+            <button class="operator" onclick="clean()">C</button>
+            <button class="operator" onclick="plusMinus()">+/-</button>
+            <button class="operator" onclick="numbers('*')">*</button>
+            <button class="operator" onclick="numbers('/')">/</button>
+
+            <button class="number" onclick="numbers(7)">7</button>
+            <button class="number" onclick="numbers(8)">8</button>
+            <button class="number" onclick="numbers(9)">9</button>
+            <button class="operator" onclick="numbers('-')">-</button>
+
+            <button class="number" onclick="numbers(4)">4</button>
+            <button class="number" onclick="numbers(5)">5</button>
+            <button class="number" onclick="numbers(6)">6</button>
+            <button class="operator" onclick="numbers('+')">+</button>
+
+            <button class="number" onclick="numbers('1')">1</button>
+            <button class="number" onclick="numbers('2')">2</button>
+            <button class="number" onclick="numbers('3')">3</button>
+            <button class="operator" id="equal" onclick="calculate()">=</button>
+
+            <button class="number-zero" onclick="numbers('0')">0</button>
+            <button class="number" id="dot" onclick="numbers('.')">.</button>
+        </div>
+
+    </div>
+    <div class="footer">
+
+        <p class="copyright">Copyright © 2024 - Desenvolvido por <strong> Jonatas Cavalcante</strong> </p>
+
+        <a class="contato" target="_blank" href="https://www.linkedin.com/in/jonatas-jc/">
+            <img src="./linkedin.png" alt="linkedin-logo">
+        </a>
+
+    </div>
+</body>
+
+</html>
